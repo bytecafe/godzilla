@@ -66,7 +66,7 @@ func logf(level LogLevel, f string, args ...interface{}) {
 		prefix += "[DEBUG]"
 	}
 
-	_, file, _, _ := runtime.Caller(2) // nolint:dogsled
+	_, file, _, _ := runtime.Caller(2) // nolint
 	pkg := path.Base(path.Dir(file))
 	prefix += "[" + pkg + "] "
 
